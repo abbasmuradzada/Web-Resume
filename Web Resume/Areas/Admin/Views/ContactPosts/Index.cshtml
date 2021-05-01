@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ContactPost>
+@{
+    Layout = null;
+    ViewData["Title"] = "Index";
+    int count = 0;
+    //Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h1>@TempData["Message"]</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Content</th>
+            <th scope="col">Answer</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th scope="row">@count</th>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Subject</td>
+                <td>@item.Content</td>
+                <td>
+                    @if (item.AnswerByUser == null)
+                    {
+                        <a asp-action="Answer" asp-route-id="@item.Id">
+                            <button>-></button>
+                        </a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

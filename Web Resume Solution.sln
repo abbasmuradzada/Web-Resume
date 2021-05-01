@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web Resume", "Web Resume\Web Resume.csproj", "{E4934993-365F-44C2-AAAA-5A7A9575E0DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR-Intro", "SignalR-Intro\SignalR-Intro.csproj", "{942426C0-55F3-4092-8DD0-A1F353C8BB47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4934993-365F-44C2-AAAA-5A7A9575E0DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4934993-365F-44C2-AAAA-5A7A9575E0DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4934993-365F-44C2-AAAA-5A7A9575E0DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4934993-365F-44C2-AAAA-5A7A9575E0DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{942426C0-55F3-4092-8DD0-A1F353C8BB47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{942426C0-55F3-4092-8DD0-A1F353C8BB47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{942426C0-55F3-4092-8DD0-A1F353C8BB47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{942426C0-55F3-4092-8DD0-A1F353C8BB47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7091A2CF-EBB8-4ADC-807F-1529FA74AFAF}
+	EndGlobalSection
+EndGlobal

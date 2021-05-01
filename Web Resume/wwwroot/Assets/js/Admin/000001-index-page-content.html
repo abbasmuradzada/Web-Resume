@@ -1,0 +1,52 @@
+﻿<ul class="breadcrumb">
+    <li>
+        <p>Ana səhifə</p>
+    </li>
+    <li>
+        <a href="#" class="active">Kateqoriyalar</a>
+    </li>
+</ul>
+<div class="page-title">
+    <i class="icon-custom-left"></i>
+    <a asp-action="Index">
+        <h3>Kateqoriyalar</h3>
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="grid simple">
+            <div class="grid-body no-border">
+                <table class="table no-more-tables">
+                    <thead>
+                        <tr>
+                            <th class="operation">
+                                <a asp-action="Create" class="btn btn-sm btn-success">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td class="operation">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">
+                                    <i class="far fa-eye"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

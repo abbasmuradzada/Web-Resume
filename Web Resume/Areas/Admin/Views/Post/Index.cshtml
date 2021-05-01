@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Post>;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    int Count = 0;
+}
+
+<div class="container">
+    <a asp-action="Create" class="btn btn-primary">Create New One</a>
+    <table dark class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Desc</th>
+                <th scope="col">Image</th>
+                <th scope="col">Delete</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                Count++;
+                <tr>
+                    <td>@Count</td>
+                    <td>@item.Title</td>
+                    <td>@item.Desc</td>
+                    <td>
+                        <img src="~/Assets/images/post/@item.Image" height="100" width="150" />
+                    </td>
+                    <td><a class="btn btn-danger" asp-action="DeletePost" asp-route-id="@item.Id">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
